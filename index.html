@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(214, 228, 233);
+
+}
+
+
+.frame { 
+    width: 26rem;
+ height: 110px;
+ background: white;
+ box-shadow: 12px 11px 20px #0000000f;
+ border-radius: 20px;
+  display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0px 15px;
+    position: relative;
+}
+.logo {
+    width: 85px;
+    height: 85px;
+    background-color: #73746b;
+    border-radius: 50%; 
+    margin-top: 5px;
+    margin-bottom: 5px;
+    
+    
+    align-items: center;
+}
+
+
+.logo img{
+  
+    width: 75px;
+    border-radius: 50% ;
+    margin-top:5px;
+    margin-bottom: 2.5px;
+    margin-left: 5px;
+   
+    
+    
+}
+.title-p
+{
+    position: absolute;
+    top: 5px;
+    left: 120px;
+    font-size: 22px;
+    font-family: cursive;
+    font-weight: 700;
+    color: #5a5a5a;
+
+}
+
+.size
+{
+    width: 17rem;
+    position: absolute;
+    right: 40px;
+    display: flex;
+    justify-content: space-between;
+   
+
+}
+
+.size p{
+    font-size: 17px;
+    font-family: cursive;
+    font-weight: 700;
+    color: #1c1b1b;
+
+}
+ .loading
+ {
+    position: absolute;
+    left: 6rem;
+    top: 75px;
+    display: flex;
+    align-items: center;
+   
+ }
+
+ .loading::after{
+    content: "";
+    position: absolute;
+    width: 0rem;
+    height:15px ;
+    background: linear-gradient(98deg, #19b5e4, #7ddef1);
+    border-radius: 28px;
+    animation: anim 1s forwards ease-in-out;
+ }
+ .loading::before
+ {
+    content: "";
+    width: 18rem;
+    height: 9px;
+    background: #b5b5b58c;
+    border-radius: 14px;
+  
+
+ }
+
+
+@keyframes anim {
+    100%{
+        width: 13rem;
+    }
+
+    80%{
+        width:10rem;
+    }
+
+    60%{
+        width:9rem ;
+    }
+    30%{
+        width:8rem ;
+    }
+}
+
+@media (max-width:650px) {
+    .loading::after
+    {
+        width: 2rem ;
+    }
+    
+}
+
+
+@media (max-width:650px) {
+    .loading::before
+    {
+        width: 13rem ;
+    }
+    
+}
+
+@media (max-width:600px){
+    .size{
+        width: 11rem;
+    }
+
+    .size p{
+        font-size: 13px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+</style>
+
+
+<body>
+    <div class="frame">
+        <div class="logo">
+            <img src="image.png" alt="none">
+        </div>
+        <p class="title-p">Images</p>
+        <div class="size">
+            <p> 327.5GB</p>
+            <p> 22,008 Files</p>
+        </div>
+        <div class="loading">
+
+        </div>
+    </div>
+</body>
+</html>
